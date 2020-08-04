@@ -61,6 +61,31 @@
 #####################################################################
 ## Question: Enumeration vs Iterator
 ## Answer:  
+	    1) Enumeration, you can only traverse the Collection object. But using Iterator, you can also remove an element while traversing the Collection. This is the one major difference between Enumeration and Iterator in java. You can say Iterator is some what advanced version of Enumeration. In this post, we will see the differences between Enumeration Vs Iterator In Java. 
+	    2) remove() method
+		This is the main difference between Enumeration and Iterator interface. Enumeration only traverses the Collection object. You can’t do any modifications to Collection while traversing the Collection using Enumeration. Where as Iterator interface allows us to remove an element while traversing the Collection object. Iterator has remove() method which is not there in the Enumeration interface. Below is the list of Enumeration and Iterator methods.
+		Iterator	Enumeration
+		hasNext()	hasMoreElements()
+		next()	nextElement()
+		remove()	(Not Available)
+		3) Legacy Interface
+		Enumeration is a legacy interface used to traverse only the legacy classes like Vector, HashTable and Stack. Where as Iterator is not a legacy code which is used to traverse most of the classes in the collection framework. For example, ArrayList, LinkedList, HashSet, LinkedHashSet, TreeSet, HashMap, LinkedHashMap, TreeMap etc.
+		4) Fail-Fast Vs Fail-Safe
+		 
+		Iterator is a fail-fast in nature. i.e it throws ConcurrentModificationException if a collection is modified while iterating other than it’s own remove() method. Where as Enumeration is fail-safe in nature. It doesn’t throw any exceptions if a collection is modified while iterating. [See more]
+		5) Safe And Secure
+		As Iterator is fail-fast in nature and doesn’t allow modification of a collection by other threads while iterating, it is considered as safe and secure than Enumeration.
+		6) Which One To Use
+		According to Java API Docs, Iterator is always preferred over the Enumeration. Here is the note from the Enumeration Docs.
+		NOTE: The functionality of this interface is duplicated by the Iterator interface. In addition, Iterator adds an optional remove operation, and has shorter method names. New implementations should consider using Iterator in preference to Enumeration.
+		Enumeration Vs Iterator In Java :
+		Enumeration	Iterator
+		Using Enumeration, you can only traverse the collection. You can’t do any modifications to collection while traversing it.	Using Iterator, you can remove an element of the collection while traversing it.
+		Enumeration is introduced in JDK 1.0	Iterator is introduced from JDK 1.2
+		Enumeration is used to traverse the legacy classes like Vector, Stack and HashTable.	Iterator is used to iterate most of the classes in the collection framework like ArrayList, HashSet, HashMap, LinkedList etc.
+		Methods : hasMoreElements() and nextElement()	Methods : hasNext(), next() and remove()
+		Enumeration is fail-safe in nature.	Iterator is fail-fast in nature.
+		Enumeration is not safe and secured due to it’s fail-safe nature.	Iterator is safer and secured than Enumeration.
 
 #####################################################################
 ## Question: HashMap vs HashTable
