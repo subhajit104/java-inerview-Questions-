@@ -45,7 +45,11 @@
 
 #####################################################################
 ## Question: ArrayList vs Vector vs LinkedList
+![alt text](http://www.programcreek.com/wp-content/uploads/2009/02/java-collection-hierarchy.jpeg)
 ## Answer:  
+     1. ArrayList is implemented as a re-sizable array. It's elements can be accessed directly by using the get and set methods, since ArrayList is essentially an array.
+     2.  LinkedList is implemented as a double linked list. Its performance on add and remove is better than Arraylist, but worse on get and set methods.
+     3. Vector is similar with ArrayList, but it is synchronized. ArrayList is a better choice if your program is thread-safe. Vector and ArrayList require space as more elements are added. Vector each time doubles its array size, while ArrayList grow 50% of its size each time. LinkedList, however, also implements Queue interface which adds more methods than ArrayList and Vector, such as offer(), peek(), poll(), etc.  
 
 #####################################################################
 ## Question: Enumeration vs Iterator
