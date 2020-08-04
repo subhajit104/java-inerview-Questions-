@@ -22,10 +22,13 @@
 
 #####################################################################
 ## Questio: Exception in java 
+![alt text](https://static.javatpoint.com/images/throwable.png)
 ## Pointers:
-     1.  
+     1.  checked or compile time exceptions. 
+     2.  unchecked exceptions or run time exceptions.
+     3.  Errors vs exceptions 
 ## Answer: 
-     1. https://www.geeksforgeeks.org/exceptions-in-java/#:~:text=Customized%20Exception%20Handling%20%3A%20Java%20exception,try%20block%2C%20it%20is%20thrown.
+     1. https://www.javatpoint.com/exception-handling-in-java
 
 #####################################################################
 ## Questio: string, stringBuilder, stringBuffer.
